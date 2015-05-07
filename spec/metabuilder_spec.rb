@@ -1,5 +1,4 @@
 require 'rspec'
-require_relative '../src/metabuilder'
 
 describe 'Metabuilder' do
 
@@ -27,6 +26,7 @@ describe 'Metabuilder' do
     expect(perro.duenio).to eq("Cesar Millan")
   end
 
+=begin
   it 'no puedo usar propiedades que no estan definidas para el builder' do
     metabuilder = Metabuilder.new
     metabuilder.set_target_class(Perro)
@@ -153,5 +153,6 @@ describe 'Metabuilder' do
     expect(perro.method(:rescata_a).arity).to eq(1)
     expect(perro.rescata_a("Pedro")).to eq("Rescate a Pedro!")
   end
+=end
 
 end
